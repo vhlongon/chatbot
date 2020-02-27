@@ -30,8 +30,8 @@ const App = () => {
       <Widget
         handleNewUserMessage={handleNewUserMessage}
         profileAvatar={logo}
-        title="My awesome chatbot"
-        subtitle="V & S limited"
+        title="The support chat awesome sauce"
+        subtitle="Powered eti dev brainz"
       />
     </div>
   );
