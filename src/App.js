@@ -4,13 +4,25 @@ import "react-chat-widget/lib/styles.css";
 import logo from "./logo.svg";
 
 const App = () => {
+  const fetchServerData = async (name = "How can I help you? ") => {
+    try {
+      const response = await fetch(`/api/greeting?name=${name}`);
+      const json = await response.json();
+      return json;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
-    addResponseMessage("I welcome here!");
+    fetchServerData().then(({ greeting }) => addResponseMessage(greeting));
   }, []);
-  const handleNewUserMessage = newMessage => {
-    console.log(`New message incoming! ${newMessage}`);
-    // Now send the message throught the backend API
-    // addResponseMessage(response);
+
+  const handleNewUserMessage = question => {
+    fetchServerData(question).then(({ greeting }) =>
+      // TODO: implement the server AI logic to answer to whatever we send here :D
+      addResponseMessage(`the response for the ${question}: ${greeting}`)
+    );
   };
 
   return (
