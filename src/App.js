@@ -4,9 +4,9 @@ import "react-chat-widget/lib/styles.css";
 import logo from "./logo.svg";
 
 const App = () => {
-  const fetchServerData = async (name = "How can I help you? ") => {
+  const fetchServerData = async (message = "hello") => {
     try {
-      const response = await fetch(`/api/greeting?name=${name}`);
+      const response = await fetch(`/handlemessage?message=${message}`);
       const json = await response.json();
       return json;
     } catch (error) {
@@ -15,13 +15,12 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchServerData().then(({ greeting }) => addResponseMessage(greeting));
+    fetchServerData().then(({ reply }) => addResponseMessage(reply));
   }, []);
 
   const handleNewUserMessage = question => {
-    fetchServerData(question).then(({ greeting }) =>
-      // TODO: implement the server AI logic to answer to whatever we send here :D
-      addResponseMessage(`the response for the ${question}: ${greeting}`)
+    fetchServerData(question).then(({ reply }) =>
+      addResponseMessage(reply)
     );
   };
 
