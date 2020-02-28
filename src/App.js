@@ -1,10 +1,17 @@
 import React, { useEffect } from "react";
-import { Widget, addResponseMessage } from "react-chat-widget";
+import {
+  Widget,
+  addResponseMessage,
+  toggleMsgLoader,
+  renderCustomComponent
+} from "react-chat-widget";
 import "react-chat-widget/lib/styles.css";
-import logo from "./logo.svg";
+import LoadingDots from "./LoadingDots";
+import traveler from "./traveler.svg";
+import "./index.css";
 
 const App = () => {
-  const fetchServerData = async (name = "How can I help you? ") => {
+  const fetchServerData = async (name = "") => {
     try {
       const response = await fetch(`/api/greeting?name=${name}`);
       const json = await response.json();
@@ -15,23 +22,28 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchServerData().then(({ greeting }) => addResponseMessage(greeting));
+    addResponseMessage("How can I help you?");
   }, []);
 
   const handleNewUserMessage = question => {
-    fetchServerData(question).then(({ greeting }) =>
-      // TODO: implement the server AI logic to answer to whatever we send here :D
-      addResponseMessage(`the response for the ${question}: ${greeting}`)
-    );
+    toggleMsgLoader();
+
+    fetchServerData(question).then(({ greeting }) => {
+      setTimeout(() => {
+        toggleMsgLoader();
+        renderCustomComponent(LoadingDots, { hide: true });
+        addResponseMessage(`response ${greeting}`);
+      }, 1000);
+    });
   };
 
   return (
     <div className="App">
       <Widget
         handleNewUserMessage={handleNewUserMessage}
-        profileAvatar={logo}
-        title="The support chat awesome sauce"
-        subtitle="Powered eti dev brainz"
+        profileAvatar={traveler}
+        title="Supersaver support chat"
+        subtitle="Powered by Etraveli"
       />
     </div>
   );
