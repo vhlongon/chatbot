@@ -40,6 +40,7 @@ const QuickReply = ({ choices = [], onClick = () => {} }) => {
   );
 };
 const App = () => {
+  fetch('/cleanmessages');
   const fetchServerData = async (message = "hello") => {
     try {
       const response = await fetch(`/handlemessage?message=${message}`);
