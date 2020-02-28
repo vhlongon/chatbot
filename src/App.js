@@ -9,6 +9,7 @@ import {
 } from "react-chat-widget";
 import "react-chat-widget/lib/styles.css";
 import traveler from "./traveler.svg";
+import supersaverlogo from "./supersaver.svg";
 import "./index.css";
 
 const QuickReply = ({ choices = [], onClick = () => {} }) => {
@@ -72,8 +73,9 @@ const App = () => {
       <Widget
         handleNewUserMessage={handleNewUserMessage}
         profileAvatar={traveler}
-        title="Supersaver support chat"
+        title="Suupport chat"
         subtitle="Powered by Etraveli"
+        titleAvatar={supersaverlogo}
       />
     </div>
   );

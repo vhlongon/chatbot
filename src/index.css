@@ -32,6 +32,11 @@ code {
   text-align: left;
 }
 
+.rcw-conversation-container .avatar {
+  width: 60px;
+  height: 60px;
+}
+
 .rcw-conversation-container .rcw-header {
   background-color: #0068bc;
 }
