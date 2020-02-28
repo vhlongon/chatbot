@@ -95,13 +95,13 @@ async function handleMessage(message) {
 }
 
 function updateAskedQuestions(question) {
-  let prevQuestions = JSON.parse(sessionStorage.getItem("asked")) || [];
-  prevQuestions = prevQuestions.push(question);
+  let prevQuestions = sessionStorage.getItem("asked") || [];
+  prevQuestions = prevQuestions.concat(question);
   sessionStorage.setItem("asked", JSON.stringify(prevQuestions));
 }
 
 function questionHasBeenAsked(question) {
-  let prevQuestions = JSON.parse(sessionStorage.getItem("asked")) || [];
+  let prevQuestions = sessionStorage.getItem("asked") || [];
   return prevQuestions.indexOf(question) > -1;
 }
 
