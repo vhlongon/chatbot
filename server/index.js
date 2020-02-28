@@ -129,6 +129,11 @@ app.get("/handlemessage", (req, res) => {
   });
 });
 
+app.get("/cleanmessages", (req, res) => {
+  sessionStorage.setItem("asked", JSON.stringify([]));
+  res.send(JSON.stringify({response: "ok"}));
+});
+
 app.listen(3001, () =>
   console.log("Express server is running on localhost:3001")
 );
