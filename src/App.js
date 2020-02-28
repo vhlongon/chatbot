@@ -68,14 +68,19 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <Widget
-        handleNewUserMessage={handleNewUserMessage}
-        profileAvatar={traveler}
-        title="Supersaver support chat"
-        subtitle="Powered by Etraveli"
-      />
-    </div>
+    <>
+      <div className="content">
+        <iframe width="100%" height="100%" frameborder="0" title="SuperSaverTravel" src="https://www.supersavertravel.se/" />
+      </div>
+      <div className="App">
+        <Widget
+          handleNewUserMessage={handleNewUserMessage}
+          profileAvatar={traveler}
+          title="Supersaver support chat"
+          subtitle="Powered by Etraveli"
+        />
+      </div>
+    </>
   );
 };
 
