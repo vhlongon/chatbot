@@ -40,6 +40,12 @@ code {
   background-color: #0068bc;
 }
 
-.rcw-client  {
+.rcw-client {
   background-color: #0068bc73;
+}
+
+.rcw-response--quick {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
 }

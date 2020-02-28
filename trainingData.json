@@ -1,79 +1,87 @@
 {
-    "hello": {
-        "questions": [
-            "introduce yourself",
-            "sup",
-            "is this a bot?",
-            "who are you",
-            "hej",
-            "hey",
-            "i need help",
-            "i have a question",
-            "help!",
-            "hi",
-            "hi there",
-            "hello"
-        ],
-        "answer": "Hello 👋 This is Eti! How can I help you today?"
-    },
-    "question": {
-        "questions": [
-            "i need help",
-            "can you help me?",
-            "i need some advice",
-            "i have a question",
-            "i cannot get anyone on the phone",
-            "i have a query i was hoping you could assist me with"
-        ],
-        "answer": "Certainly, how can I assist?"
-    },
-    "cancel": {
-        "questions": [
-            "i would like to cancel my ticket",
-            "i no longer want to fly",
-            "greta convinced me to take the train",
-            "how do i cancel my ticket?",
-            "i want to cancel my flight",
-            "how can i cancel my flight?",
-            "i can't fly anymore",
-            "i need to reschedule my flight",
-            "i would like to reschedule my flight"
-        ],
-        "answer": "I'm sorry to hear that, if you want to cancel your flight we have the following options: \n1. Bla \n2. Blabla\n3. Go home\n\nWhich one would you prefer?"
-    },
-    "namechange": {
-        "questions": [
-            "i no longer want to fly, can someone else use my ticket?",
-            "i want my sibling to fly instead of me",
-            "i want to change the name on my ticket",
-            "can someone else fly instead of me?",
-            "how do i change the name on my flight?"
-        ],
-        "answer": "This is possible, if you give me your order number we can have a look at the costs associated with that.\nMay I have your oder number please?"
-    },
-    "corona": {
-        "questions": [
-            "should i be afraid of the corona virus?",
-            "i am too scared to fly because of corona",
-            "i want to cancel my flight because of the virus",
-            "i want to cancel my flight because of covid-19",
-            "i want to cancel my flight because of corona",
-            "corona virus",
-            "covid-19",
-            "i am too afraid to fly to asia",
-            "i no longer want to go to china"
-        ],
-        "answer": "For questions about the COVID-19 (Corona) virus, please wait until one of my colleagues joins to help you with your concerns. \n Have a nice day!"
-    },
-    "addbaggage": {
-        "questions": [
-            "i need more baggage!",
-            "i just don't think 23kg is enough for my shoes",
-            "can i add extra baggage to my ticket?",
-            "i need to add baggage",
-            "i only have cabin baggage on my ticket, this is not enough",
-            "i would like to add more baggage to my ticket"
-        ],
-        "answer": "The fees for adding baggage differ depending on your ticket. \nMay I please have your order number?"
-    }
+  "hello": {
+    "questions": [
+      "introduce yourself",
+      "sup",
+      "is this a bot?",
+      "who are you",
+      "hej",
+      "hey",
+      "i need help",
+      "i have a question",
+      "help!",
+      "hi",
+      "hi there",
+      "hello"
+    ],
+    "answer": "Hello 👋 This is Eti! How can I help you today?"
+  },
+  "test": {
+    "questions": ["I need help!"],
+    "answer": [
+      "Questions about Baggage?",
+      "Want to cancel you trip?",
+      "worried about Corona virus?"
+    ]
+  },
+  "question": {
+    "questions": [
+      "i need help",
+      "can you help me?",
+      "i need some advice",
+      "i have a question",
+      "i cannot get anyone on the phone",
+      "i have a query i was hoping you could assist me with"
+    ],
+    "answer": "Certainly, how can I assist?"
+  },
+  "cancel": {
+    "questions": [
+      "i would like to cancel my ticket",
+      "i no longer want to fly",
+      "greta convinced me to take the train",
+      "how do i cancel my ticket?",
+      "i want to cancel my flight",
+      "how can i cancel my flight?",
+      "i can't fly anymore",
+      "i need to reschedule my flight",
+      "i would like to reschedule my flight"
+    ],
+    "answer": "I'm sorry to hear that, if you want to cancel your flight we have the following options: \n1. Bla \n2. Blabla\n3. Go home\n\nWhich one would you prefer?"
+  },
+  "namechange": {
+    "questions": [
+      "i no longer want to fly, can someone else use my ticket?",
+      "i want my sibling to fly instead of me",
+      "i want to change the name on my ticket",
+      "can someone else fly instead of me?",
+      "how do i change the name on my flight?"
+    ],
+    "answer": "This is possible, if you give me your order number we can have a look at the costs associated with that.\nMay I have your oder number please?"
+  },
+  "corona": {
+    "questions": [
+      "should i be afraid of the corona virus?",
+      "i am too scared to fly because of corona",
+      "i want to cancel my flight because of the virus",
+      "i want to cancel my flight because of covid-19",
+      "i want to cancel my flight because of corona",
+      "corona virus",
+      "covid-19",
+      "i am too afraid to fly to asia",
+      "i no longer want to go to china"
+    ],
+    "answer": "For questions about the COVID-19 (Corona) virus, please wait until one of my colleagues joins to help you with your concerns. \n Have a nice day!"
+  },
+  "addbaggage": {
+    "questions": [
+      "i need more baggage!",
+      "i just don't think 23kg is enough for my shoes",
+      "can i add extra baggage to my ticket?",
+      "i need to add baggage",
+      "i only have cabin baggage on my ticket, this is not enough",
+      "i would like to add more baggage to my ticket"
+    ],
+    "answer": "The fees for adding baggage differ depending on your ticket. \nMay I please have your order number?"
+  }
 }
