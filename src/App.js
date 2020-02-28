@@ -16,17 +16,17 @@ const App = () => {
   };
 
   useEffect(() => {
+    addResponseMessage("Hi, how can I help you?");
+  }, []);
+
+  const handleNewUserMessage = question => {
     toggleMsgLoader();
     setTimeout(() => {
-      fetchServerData().then(({ reply }) => {
+      fetchServerData(question).then(({ reply }) => {
         toggleMsgLoader();
         addResponseMessage(reply);
       });
     }, 1500);
-  }, []);
-
-  const handleNewUserMessage = question => {
-    fetchServerData(question).then(({ reply }) => addResponseMessage(reply));
   };
 
   return (
