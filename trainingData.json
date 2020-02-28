@@ -21,7 +21,9 @@
             "i need help",
             "can you help me?",
             "i need some advice",
-            "i have a question"
+            "i have a question",
+            "i cannot get anyone on the phone",
+            "i have a query i was hoping you could assist me with"
         ],
         "answer": "Certainly, how can I assist?"
     },
@@ -52,6 +54,7 @@
     "corona": {
         "questions": [
             "should i be afraid of the corona virus?",
+            "i am too scared to fly because of corona",
             "i want to cancel my flight because of the virus",
             "i want to cancel my flight because of covid-19",
             "i want to cancel my flight because of corona",
