@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import { Widget, addResponseMessage } from "react-chat-widget";
+import { Widget, addResponseMessage, toggleMsgLoader } from "react-chat-widget";
 import "react-chat-widget/lib/styles.css";
-import logo from "./logo.svg";
+import traveler from "./traveler.svg";
+import "./index.css";
 
 const App = () => {
   const fetchServerData = async (message = "hello") => {
@@ -15,22 +16,26 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchServerData().then(({ reply }) => addResponseMessage(reply));
+    toggleMsgLoader();
+    setTimeout(() => {
+      fetchServerData().then(({ reply }) => {
+        toggleMsgLoader();
+        addResponseMessage(reply);
+      });
+    }, 1500);
   }, []);
 
   const handleNewUserMessage = question => {
-    fetchServerData(question).then(({ reply }) =>
-      addResponseMessage(reply)
-    );
+    fetchServerData(question).then(({ reply }) => addResponseMessage(reply));
   };
 
   return (
     <div className="App">
       <Widget
         handleNewUserMessage={handleNewUserMessage}
-        profileAvatar={logo}
-        title="The support chat awesome sauce"
-        subtitle="Powered eti dev brainz"
+        profileAvatar={traveler}
+        title="Supersaver support chat"
+        subtitle="Powered by Etraveli"
       />
     </div>
   );
