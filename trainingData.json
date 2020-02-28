@@ -16,14 +16,6 @@
     ],
     "answer": "Hello 👋 This is Eti! How can I help you today?"
   },
-  "test": {
-    "questions": ["I need help!"],
-    "answer": [
-      "Questions about Baggage?",
-      "Want to cancel you trip?",
-      "worried about Corona virus?"
-    ]
-  },
   "question": {
     "questions": [
       "i need help",
@@ -33,7 +25,11 @@
       "i cannot get anyone on the phone",
       "i have a query i was hoping you could assist me with"
     ],
-    "answer": "Certainly, how can I assist?"
+    "answer": [
+      "I have a question about baggage",
+      "I would like to cancel my trip",
+      "I am worried about the corona virus"
+    ]
   },
   "cancel": {
     "questions": [
@@ -47,7 +43,29 @@
       "i need to reschedule my flight",
       "i would like to reschedule my flight"
     ],
-    "answer": "I'm sorry to hear that, if you want to cancel your flight we have the following options: \n1. Bla \n2. Blabla\n3. Go home\n\nWhich one would you prefer?"
+    "answer": [
+      "I purchased cancellation protection",
+      "I don't know if I have cancellation protection"
+    ]
+  },
+  "cancelinsuranceyes": {
+    "questions": [
+      "I have cancellation protection",
+      "I purchased cancellation protection",
+      "I have cancellation insurance",
+      "I purchased cancellation insurance"
+    ],
+    "answer": "Great! I just need your order number to confirm and we will refund your ticket within 5 working days."
+  },
+  "cancelinsuranceno": {
+    "questions": [
+      "I do not have cancellation protection",
+      "I don't have cancellation protection",
+      "I do not have cancellation insurance",
+      "I don't have cancellation insurance",
+      "I don't know if I have cancellation protection"
+    ],
+    "answer": "I am afraid you will have to pay up. No money for you."
   },
   "namechange": {
     "questions": [

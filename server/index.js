@@ -78,10 +78,10 @@ async function handleMessage(message) {
 
   if (interpretation.guess && trainingData[interpretation.guess]) {
     console.info("Found response");
-    if (questionHasBeenAsked(interpretation.guess)) {
+    /*if (questionHasBeenAsked(interpretation.guess)) {
       return "You've already asked this";
     }
-    updateAskedQuestions(interpretation.guess);
+    updateAskedQuestions(interpretation.guess);*/
     return trainingData[interpretation.guess].answer;
   } else {
     console.info("Couldn't match phrase");

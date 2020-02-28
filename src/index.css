@@ -1,6 +1,3 @@
-html, body, .content, #root {
-  height: 100%;
-}
 
 body {
   margin: 0;
@@ -37,8 +34,8 @@ code {
 }
 
 .rcw-conversation-container .avatar {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
 }
 
 .rcw-conversation-container .rcw-header {

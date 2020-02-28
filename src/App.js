@@ -74,7 +74,7 @@ const App = () => {
       <Widget
         handleNewUserMessage={handleNewUserMessage}
         profileAvatar={traveler}
-        title="Suupport chat"
+        title="Support chat"
         subtitle="Powered by Etraveli"
         titleAvatar={supersaverlogo}
       />
