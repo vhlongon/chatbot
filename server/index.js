@@ -8,14 +8,10 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(pino);
 
-// Library to provide natual language processing and
-// basic machine learning cabailities
 const NLP = require("natural");
 
-// Built-in Node library for loading files operations
 const fs = require("fs");
 
-// Create a new classifier to train
 const classifier = new NLP.LogisticRegressionClassifier();
 
 /**
@@ -25,7 +21,7 @@ const classifier = new NLP.LogisticRegressionClassifier();
  * @returns {Object} Object parsed from json file provided
  */
 function parseTrainingData(filePath) {
-  const trainingFile = fs.readFileSync("./trainingData.json");
+  const trainingFile = fs.readFileSync(filePath);
   return JSON.parse(trainingFile);
 }
 
@@ -37,9 +33,8 @@ function parseTrainingData(filePath) {
  * @param {Array.String} phrases
  */
 function trainClassifier(classifier, label, phrases) {
-  console.info("Teaching set", label, phrases);
   phrases.forEach(phrase => {
-    console.info(`Teaching single ${label}: ${phrase}`);
+    console.info(`[Teaching] ${label}: ${phrase}`);
     classifier.addDocument(phrase.toLowerCase(), label);
   });
 }
@@ -83,10 +78,10 @@ async function handleMessage(message) {
 
   if (interpretation.guess && trainingData[interpretation.guess]) {
     console.info("Found response");
-    if (questionHasBeenAsked(message)) {
+    if (questionHasBeenAsked(interpretation.guess)) {
       return "You've already asked this";
     }
-    updateAskedQuestions(message);
+    updateAskedQuestions(interpretation.guess);
     return trainingData[interpretation.guess].answer;
   } else {
     console.info("Couldn't match phrase");
